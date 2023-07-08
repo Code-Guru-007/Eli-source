@@ -1,0 +1,45 @@
+/* DealCard.js */
+import React from 'react';
+import { useNavigate } from 'react-router-dom'
+
+import './MobileDealCard.css'
+
+import AmazonLogo from '../assets/Amazon.svg'
+import BestBuyLogo from '../assets/Best_Buy.svg'
+import WalmartLogo from '../assets/Walmart.svg'
+import WootLogo from '../assets/Woot.svg'
+
+function MobileDealCard({ id, image, title, url, cprice, oprice }) {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/details/${id}`)
+    }
+
+  return (
+    <div onClick={() => handleClick()}>
+        <div className='bg-white w-full border-[2px] border-neutral-400 rounded-xl px-[10px] py-[20px] mb-[20px]'>
+            <div className='grid grid-cols-4'>
+                <div className='w-full flex items-center'>
+                    <img src={image} alt="Image"/>
+                </div>
+                <div className='col-span-3 grid grid-rows-3 ml-[10px]'>
+                    <div className='row-span-2 flex items-center'>
+                        <div className='deal-title'>{title}</div>
+                    </div>                
+                    <div className='flex justify-between'>
+                        <img className="w-[150px] h-[50px]" src={AmazonLogo} />
+                        <div className=" text-[14px] sm:text-[20px] flex justify-center mt-[10px]" style={{height:"30px"}}>
+                            <p className="text-green-600 font-bold" style={{marginRight:"20px"}}>{cprice}</p>
+                            <p className="line-through text-red-600 font-bold">{oprice}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  );
+}
+
+export default MobileDealCard;
