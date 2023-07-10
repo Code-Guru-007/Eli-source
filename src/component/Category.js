@@ -8,7 +8,7 @@ function Category({products}) {
 
 
     return (
-        <>
+        <div className="mb-[30px]">
             <div className="text-center text-[20px] mb-[20px]">
                 {products[0]}
             </div>
@@ -17,7 +17,7 @@ function Category({products}) {
                     <ProductCard key={index} Mtype={Mtype} product={product}/>
                 ))}
             </div>
-        </>
+        </div>
     );
 
 }
