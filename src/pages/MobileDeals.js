@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { useParams } from 'react-router-dom';
 
 import Navbar from '../layout/Navbar'
 import Footer from '../layout/Footer';
@@ -10,14 +10,23 @@ import Pagination from '../component/Pagination'
 import { paginate } from '../utils/paginate';
 
 function MobileDeals({data}) {
-  const [deals, setDeals] = useState(data);
+  var deals = data;
+  const { subtype } = useParams();
+  if(subtype) deals = data.filter((deal) => deal["Subtype"].toLowerCase() === subtype.toLowerCase())
+
   const [count, setCount] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(12);
   const [searchText, setSearchText] = useState("");
   const [filteredData, setFilteredData] = useState(deals);
+  var dealtitle="All Deals"
 
-  const dealStatus = (window.location.href).includes('deals');
+  if((window.location.href).includes('deals'))
+    dealtitle ="All Deals";
+  else if((window.location.href).includes('home'))
+    dealtitle = "Today's Hottest Deals 🔥 ";
+  else if((window.location.href).includes('categories'))
+    dealtitle = subtype;
 
   const paginate_deals = paginate(filteredData, currentPage, pageSize);
 
@@ -40,9 +49,10 @@ function MobileDeals({data}) {
       <Navbar onSearch={handleSearchChange} search={true}/>
       <section id="featured-deals" className="featured-deals">
         <div className="section-header">
-          <h2 className="section-title font-bold">{dealStatus ? "All Deals":"Today's Hottest Deals 🔥 "}</h2>
+          <h2 className="section-title font-bold">{dealtitle}</h2>
         </div>
-        <div className="w-full">
+        {paginate_deals.length === 0 ? (<div className='w-full text-center'>There isn't any products</div>) : (
+          <div className="w-full">
           {paginate_deals.map((deal, index) => (
             <MobileDealCard 
               id={deal.id}
@@ -56,6 +66,7 @@ function MobileDeals({data}) {
             />
           ))}
         </div>
+        )}
         <div className="flex justify-center">
           <Pagination onPageChange={handlePageChange} totalCount={count} currentPage={currentPage} pageSize={pageSize}/>
         </div>

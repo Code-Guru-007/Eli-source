@@ -3,12 +3,6 @@ import React, { useEffect } from 'react';
 import Navbar from '../layout/Navbar'
 import Footer from '../layout/Footer';
 
-import Amazon from '../assets/Amazon.svg'
-import Best_Buy from '../assets/BestBuy.svg'
-import Walmart from '../assets/Walmart.svg'
-import Woot from '../assets/Woot.svg'
-
-
 
 function About() {
 
@@ -33,10 +27,10 @@ function About() {
         <div className='text-[20px] mt-[40px]'>Note: It is important to consult the specific terms and conditions provided by Amazon.com or its affiliated companies for detailed information about their affiliate programs and how they may affect your purchases.</div>
       </div>
       <div className='grid grid-cols-4 mb-[50px]'>
-        <div className='flex justify-center'><img className="w-[60%]" src={Amazon} /></div>
-        <div className='flex justify-center'><img className="w-[60%]" src={Best_Buy} /></div>
-        <div className='flex justify-center'><img className="w-[60%]" src={Walmart} /></div>
-        <div className='flex justify-center'><img className="w-[60%]" src={Woot} /></div>
+        <div className='flex justify-center'><img alt="Amazon" className="w-[60%]" src="/assets/Amazon.svg" /></div>
+        <div className='flex justify-center'><img alt="BestBuy" className="w-[60%]" src="/assets/BestBuy.svg" /></div>
+        <div className='flex justify-center'><img alt="Walmart" className="w-[60%]" src="/assets/Walmart.svg" /></div>
+        <div className='flex justify-center'><img alt="Woot" className="w-[60%]" src="/assets/Woot.svg" /></div>
       </div>
       <Footer />
     </>

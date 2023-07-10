@@ -5,7 +5,6 @@ import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 
 import '../App.css'
-import discount from '../assets/discount2.svg'
 
 function Details({datas}) {
 
@@ -20,7 +19,7 @@ function Details({datas}) {
                 <div className='border border-neutral-400 rounded-xl bg-white w-full p-[25px]'>
                     <div className='grid lg:grid-cols-4'>
                         <div className='col-span-3 w-full flex items-center'>
-                            <img className="w-full" src={_data.Image} alt="Image"/>
+                            <img className="w-full" src={_data.Image} alt={_data.Image}/>
                         </div>
                         <div className='flex col-span-3 lg:justify-center justify-between lg:col-span-1 lg:grid lg:grid-rows-2 lg:ml-[10px]'>
                             <div className='flex justify-center items-center'>
@@ -31,7 +30,7 @@ function Details({datas}) {
                             </div>
                             <div className="h-[60px] flex items-center justify-center">
                                 <div className="text-[14px] sm:text-[20px] text-red-700 font-bold">20&nbsp;&nbsp;</div>
-                                <img className="w-[30px] sm:w-[40px]" src={discount}/>
+                                <img className="w-[30px] sm:w-[40px]" alt="Discount" src="/assets/discount2.svg"/>
                             </div>         
                         </div>
                     </div>

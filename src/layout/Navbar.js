@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 function Navbar  ({onSearch, search})  {
 
-    
     const [ navState, setNavState] = useState("")
 
     const onNavStateChange = (n) => {
@@ -61,19 +60,19 @@ function Navbar  ({onSearch, search})  {
                 </div>):(<></>)}
                 <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                   <li>
-                    <a href="/home" onClick={()=>onNavStateChange(1)} className={navState.toString().includes("home") ? click : normal} aria-current="page">Home</a>
+                    <a href="/home" onClick={()=>onNavStateChange("/home")} className={navState.toString().includes("home") ? click : normal} aria-current="page">Home</a>
                   </li>
                   <li>
-                    <a href="/deals" onClick={()=>onNavStateChange(2)} className={navState.toString().includes("deals") ? click : normal}>Deals</a>
+                    <a href="/deals" onClick={()=>onNavStateChange("/deals")} className={navState.toString().includes("deals") ? click : normal}>Deals</a>
                   </li>
                   <li>
-                    <a href="/categories" onClick={()=>onNavStateChange(3)} className={navState.toString().includes("categories") ? click : normal}>Categories</a>
+                    <a href="/categories" onClick={()=>onNavStateChange("/categories")} className={navState.toString().includes("categories") ? click : normal}>Categories</a>
                   </li>
                   <li>
-                    <a href="/about" onClick={()=>onNavStateChange(4)} className={navState.toString().includes("about") ? click : normal}>About</a>
+                    <a href="/about" onClick={()=>onNavStateChange("/about")} className={navState.toString().includes("about") ? click : normal}>About</a>
                   </li>
                   <li>
-                    <a href="/" onClick={()=>onNavStateChange(5)} className={navState.toString().includes("contact") ? click : normal}>Contact</a>
+                    <a href="/contact" onClick={()=>onNavStateChange("/contact")} className={navState.toString().includes("contact") ? click : normal}>Contact</a>
                   </li>
                 </ul>
               </div>

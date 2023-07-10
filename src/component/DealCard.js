@@ -21,7 +21,7 @@ function DealCard({ id, image, title, url, cprice, oprice, company }) {
         </div>
         <div className='flex justify-center'>
           <div>
-            <a onClick={() => handleClick()} className="btn hover:cursor-pointer">View Deal</a><br/>
+            <div onClick={() => handleClick()} className="btn hover:cursor-pointer">View Deal</div><br/>
             <img className="w-[150px] h-[50px]" alt={id} src={`/assets/${company}.svg`} />
           </div>
         </div>
