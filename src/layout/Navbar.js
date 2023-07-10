@@ -1,4 +1,3 @@
-import logo from '../CommunityDealsLogo.JPG';
 import { useEffect, useState } from 'react';
 
 function Navbar  ({onSearch, search})  {
