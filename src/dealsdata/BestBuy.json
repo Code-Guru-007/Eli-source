@@ -7,7 +7,7 @@
       "Price2": "$175.99",
       "id" : "nrwv4v",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Smartphones"
     },
     {
       "Name": "LG 65-Inch Class UR9000 Series Alexa Built-in 4K Smart TV (3840 x 2160),Bluetooth, Wi-Fi, USB, Ethernet, HDMI 60Hz Refresh Rate, AI-Powered 4K",
@@ -17,7 +17,7 @@
       "Price2": "$74.99",
       "id" : "aegy5qnda3",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Televisions"
     },
     {
         "Name": "Amazon Fire TV 32\" 2-Series 720p HD smart TV + 4-year protection plan",
@@ -27,7 +27,7 @@
         "Price2": "$175.99",
         "id" : "atsdg32",
         "Company" : "BestBuy",
-        "Subtype" : ""
+        "Subtype" : "Cameras"
     },
     {
       "Name": "LG 65-Inch Class UR9000 Series Alexa Built-in 4K Smart TV (3840 x 2160),Bluetooth, Wi-Fi, USB, Ethernet, HDMI 60Hz Refresh Rate, AI-Powered 4K",
@@ -37,7 +37,7 @@
       "Price2": "$74.99",
       "id" : "dghyjh75",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Clothing"
     },
     {
       "Name": "Amazon Fire TV 32\" 2-Series 720p HD smart TV + 4-year protection plan",
@@ -47,7 +47,7 @@
       "Price2": "$175.99",
       "id" : "kuyd9sdg365d",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Shoes"
     },
     {
       "Name": "LG 65-Inch Class UR9000 Series Alexa Built-in 4K Smart TV (3840 x 2160),Bluetooth, Wi-Fi, USB, Ethernet, HDMI 60Hz Refresh Rate, AI-Powered 4K",
@@ -57,7 +57,7 @@
       "Price2": "$74.99",
       "id" : "s437hnthgksw6",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Accessories"
     },
     {
       "Name": "Amazon Fire TV 32\" 2-Series 720p HD smart TV + 4-year protection plan",
@@ -67,7 +67,7 @@
       "Price2": "$175.99",
       "id" : "jgtuzwg6i6",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Jewelry"
     },
     {
       "Name": "LG 65-Inch Class UR9000 Series Alexa Built-in 4K Smart TV (3840 x 2160),Bluetooth, Wi-Fi, USB, Ethernet, HDMI 60Hz Refresh Rate, AI-Powered 4K",
@@ -77,7 +77,7 @@
       "Price2": "$74.99",
       "id" : "6y54124ghgfsj",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Watches"
     },    
     {
       "Name": "Amazon Fire TV 32\" 2-Series 720p HD smart TV + 4-year protection plan",
@@ -87,7 +87,7 @@
       "Price2": "$175.99",
       "id" : "7turs56ghsjgfd",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Furniture"
     },
     {
       "Name": "LG 65-Inch Class UR9000 Series Alexa Built-in 4K Smart TV (3840 x 2160),Bluetooth, Wi-Fi, USB, Ethernet, HDMI 60Hz Refresh Rate, AI-Powered 4K",
@@ -97,7 +97,7 @@
       "Price2": "$74.99",
       "id" : "45fbabv7yfdh",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Appliances (refrigerators, washing machines, etc)"
     },    
     {
       "Name": "Amazon Fire TV 32\" 2-Series 720p HD smart TV + 4-year protection plan",
@@ -107,7 +107,7 @@
       "Price2": "$175.99",
       "id" : "ngfsfhavll73",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Skincare"
     },
     {
       "Name": "LG 65-Inch Class UR9000 Series Alexa Built-in 4K Smart TV (3840 x 2160),Bluetooth, Wi-Fi, USB, Ethernet, HDMI 60Hz Refresh Rate, AI-Powered 4K",
@@ -117,7 +117,7 @@
       "Price2": "$74.99",
       "id" : "y5sr5dhgku",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Makeup"
     },    
     {
       "Name": "Amazon Fire TV 32\" 2-Series 720p HD smart TV + 4-year protection plan",
@@ -127,7 +127,7 @@
       "Price2": "$175.99",
       "id" : "dacreqnygqyr",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Haircare"
     },
     {
       "Name": "LG 65-Inch Class UR9000 Series Alexa Built-in 4K Smart TV (3840 x 2160),Bluetooth, Wi-Fi, USB, Ethernet, HDMI 60Hz Refresh Rate, AI-Powered 4K",
@@ -137,7 +137,7 @@
       "Price2": "$74.99",
       "id" : "Agmy5mwyw",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Fragrances"
     },    
     {
       "Name": "Amazon Fire TV 32\" 2-Series 720p HD smart TV + 4-year protection plan",
@@ -147,7 +147,7 @@
       "Price2": "$175.99",
       "id" : "y42wyfh3hgfm8",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Personal Care Appliances"
     },
     {
       "Name": "LG 65-Inch Class UR9000 Series Alexa Built-in 4K Smart TV (3840 x 2160),Bluetooth, Wi-Fi, USB, Ethernet, HDMI 60Hz Refresh Rate, AI-Powered 4K",
@@ -157,6 +157,6 @@
       "Price2": "$74.99",
       "id" : "az752fdagwsrbw5",
       "Company" : "BestBuy",
-      "Subtype" : ""
+      "Subtype" : "Exercise Equipment"
     }
 ]

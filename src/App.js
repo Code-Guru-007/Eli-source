@@ -40,7 +40,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />}/>
         <Route path="/home" element={isMobile ===true ? <MobileDeals data={hotdata}/>: <Deals data={hotdata} /> } />
         <Route path="/deals" element={isMobile ===true ? <MobileDeals data={alldata["All Company"]}/>: <Deals data={alldata["All Company"]} /> } />
-        <Route path="/details/:id" element={<Details datas={alldata["All Company"]}/>}/>
+        <Route path="/deals/details/:id" element={<Details datas={alldata["All Company"]}/>}/>
         <Route path='/categories' element={<Categories />}/>
         <Route path='/categories/:mtype/:subtype' element={isMobile ===true ? <MobileDeals data={alldata["All Company"]}/>: <Deals data={alldata["All Company"]} /> }/>
         <Route path='/about' element={<About />}/>

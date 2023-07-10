@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import Navbar from "../layout/Navbar";
@@ -12,14 +13,18 @@ function Details({datas}) {
 
     const _data = datas.filter((data) => data.id === id)[0]
 
+    useEffect(() => {
+
+    }, []);
+
     return (
-        <>
+        <div className="h-[100vh]">
             <Navbar search={false}/>
-            <div className="p-[20px]">
+            <div className="p-[20px] h-auto">
                 <div className='border border-neutral-400 rounded-xl bg-white w-full p-[25px]'>
                     <div className='grid lg:grid-cols-4'>
-                        <div className='col-span-3 w-full flex items-center'>
-                            <img className="w-full" src={_data.Image} alt={_data.Image}/>
+                        <div className='col-span-3 w-full flex items-center justify-center'>
+                            <img className="" src={_data.Image} alt={_data.Image}/>
                         </div>
                         <div className='flex col-span-3 lg:justify-center justify-between lg:col-span-1 lg:grid lg:grid-rows-2 lg:ml-[10px]'>
                             <div className='flex justify-center items-center'>
@@ -35,12 +40,14 @@ function Details({datas}) {
                         </div>
                     </div>
                     <div className="flex items-center justify-center my-[20px]">
-                        <p className="text-[20px]">{_data.Name}</p>
+                        <p className="text-[20px] detail-title">{_data.Name}</p>
                     </div>
                 </div>
             </div>
-            <Footer />
-        </>
+            <div className="absolute bottom-0 w-full">
+                <Footer />
+            </div>
+        </div>
     );
 
 }

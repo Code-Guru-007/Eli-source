@@ -9,7 +9,7 @@ function MobileDealCard({ id, image, title, url, cprice, oprice, company }) {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/details/${id}`)
+        navigate(`/deals/details/${id}`)
     }
 
   return (

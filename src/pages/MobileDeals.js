@@ -10,9 +10,8 @@ import Pagination from '../component/Pagination'
 import { paginate } from '../utils/paginate';
 
 function MobileDeals({data}) {
-  var deals = data;
   const { subtype } = useParams();
-  if(subtype) deals = data.filter((deal) => deal["Subtype"].toLowerCase() === subtype.toLowerCase())
+  const deals = !subtype ? data : data.filter((deal) => deal["Subtype"].toLowerCase() === subtype.toLowerCase());
 
   const [count, setCount] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
@@ -34,7 +33,7 @@ function MobileDeals({data}) {
     const filtered_Data = searchText ? deals.filter((deal) => deal["Name"].toLowerCase().includes(searchText.toLowerCase())) : deals;
     setFilteredData(filtered_Data);
     setCount(filtered_Data.length);
-  }, [searchText, deals]);
+  }, [searchText]);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);

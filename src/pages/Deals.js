@@ -10,14 +10,9 @@ import Pagination from '../component/Pagination'
 import { paginate } from '../utils/paginate';
 
 function Deals({data}) {
-  const [deals, setDeals] = useState(data)
-
   const { subtype } = useParams();
 
-  if(subtype) {
-    var s = deals.filter((deal) => deal["Subtype"].toLowerCase() === subtype.toLowerCase())
-    setDeals(s)
-  }
+  const deals = !subtype ? data : data.filter((d) => d["Subtype"].toLowerCase() === subtype.toLowerCase())
   
   const [count, setCount] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
@@ -25,17 +20,22 @@ function Deals({data}) {
   const [searchText, setSearchText] = useState("");
   const [filteredData, setFilteredData] = useState(deals);
 
-  const dealstate = (window.location.href).includes('home')
+  var dealtitle="All Deals"
 
-  const paginate_deals = paginate(filteredData, currentPage, pageSize);
+  if((window.location.href).includes('deals'))
+    dealtitle ="All Deals";
+  else if((window.location.href).includes('home'))
+    dealtitle = "Today's Hottest Deals 🔥 ";
+  else if((window.location.href).includes('categories'))
+    dealtitle = subtype;
 
- 
+  const paginate_deals= paginate(filteredData, currentPage, pageSize);
 
-  useEffect(() => {
+   useEffect(() => {
     const filtered_Data = searchText ? deals.filter((deal) => deal["Name"].toLowerCase().includes(searchText.toLowerCase())) : deals;
     setFilteredData(filtered_Data);
     setCount(filtered_Data.length);
-  }, [searchText, deals]);
+  }, [searchText]);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -49,12 +49,7 @@ function Deals({data}) {
     <div>
       <Navbar onSearch={handleSearchChange} search={true}/>
       <section id="featured-deals" className="featured-deals">
-        <div className="section-header">
-          {subtype ? (<h2 className="section-title font-bold">{subtype}</h2>) : (
-            dealstate === true?(<h2 className="section-title font-bold">Today's Hottest Deals 🔥</h2>)
-           : (<h2 className="section-title font-bold">All Deals</h2>)
-          )}
-        </div>
+      <div className="section-header"><h2 className="section-title font-bold">{dealtitle}</h2></div>
         {paginate_deals.length === 0 ? (<div className='text-center w-full'>There isn't any products</div>):(
           <div className="grid sm:grid-cols-2  md:grid-cols-4 lg:grid-cols-5 ">
           {paginate_deals.map((deal, index) => (

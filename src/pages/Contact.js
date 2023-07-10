@@ -1,16 +1,21 @@
 import React from "react";
+import { useEffect } from "react";
 
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 
 function Contact(){
 
+    useEffect(() => {
+
+    }, []);
+
     return (
-        <>
+        <div className="h-[100vh]">
             <Navbar search={false}/>
-            <div className="px-[30px] py-[50px]">
-                <div className="grid md:grid-cols-2 gap-[10px]">
-                    <div className="hover:scale-[1.03] hover:shadow-2xl duration-500 grid grid-rows-3 bg-white border-[2px] border-neutral-400 rounded-[20px] px-[5%] py-[10%]">
+            <div className="px-[10vw] py-[10vh]">
+                <div className="grid md:grid-cols-2 gap-[10vw]">
+                    <div className="hover:scale-[1.03] hover:shadow-2xl duration-500 grid grid-rows-3 gap-y-[20px] bg-white border-[2px] border-neutral-400 rounded-[20px] px-[5%] py-[10%]">
                         <div className="row-span-2 flex items-center"><img alt="whatsapp logo" src="/assets/whatsapp.svg"/></div>
                         <div className="flex items-center justify-center" >
                             <div>
@@ -18,7 +23,7 @@ function Contact(){
                             </div>
                         </div>
                     </div>
-                    <div className="hover:scale-[1.03] hover:shadow-2xl duration-500 grid grid-rows-3 bg-white border-[2px] border-neutral-400 rounded-[20px] px-[5%] py-[10%]">
+                    <div className="hover:scale-[1.03] hover:shadow-2xl duration-500 grid grid-rows-3 gap-y-[20px] bg-white border-[2px] border-neutral-400 rounded-[20px] px-[5%] py-[10%]">
                         <div className="row-span-2 flex w-[50%] items-center">
                             <img alt="Instagram1" src="/assets/instagram1.png" />
                             <img alt="Instagram2" src="/assets/instagram2.png" />
@@ -31,10 +36,10 @@ function Contact(){
                     </div>
                 </div>
             </div>
-            <div className="absolute bottom-0 w-full">
+            <div className="md:absolute md:bottom-0 md:w-full">
                 <Footer />
             </div>
-        </>
+        </div>
     );
 
 }

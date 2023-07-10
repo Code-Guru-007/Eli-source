@@ -6,10 +6,10 @@ function ProductCard({product, Mtype}) {
     const navigate = useNavigate();
 
     const Murl = Mtype;
-    const Surl = product[0];
+    const subtype = product[0];
 
     const handleClick = () => {
-        navigate(`/categories/${Murl}/${Surl}`)
+        navigate(`/categories/${Murl}/${subtype}`)
     }
 
 
