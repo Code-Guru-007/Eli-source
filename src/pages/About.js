@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import Navbar from '../layout/Navbar'
 import Footer from '../layout/Footer';
 
 import Amazon from '../assets/Amazon.svg'
-import Best_Buy from '../assets/Best_Buy.svg'
+import Best_Buy from '../assets/BestBuy.svg'
 import Walmart from '../assets/Walmart.svg'
 import Woot from '../assets/Woot.svg'
 

@@ -125,16 +125,6 @@ body {
   justify-content: center;
 }
 
-.searchposition {
-  position: "relative"; 
-  left: 50px;
-}
-
-.searchinput {
-  border: 0px;
-  padding:5px;
-}
-
-.searchinput:focus {
-  outline: none;
+.detail-height {
+  min-height: calc(100% - 193px);
 }

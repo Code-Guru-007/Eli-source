@@ -1,14 +1,14 @@
 /* DealCard.js */
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 import './DealCard.css';
-import AmazonLogo from '../assets/Amazon.svg'
-import BestBuyLogo from '../assets/Best_Buy.svg'
-import WalmartLogo from '../assets/Walmart.svg'
-import WootLogo from '../assets/Woot.svg'
 
-function DealCard({ image, title, url, cprice, oprice }) {
+function DealCard({ id, image, title, url, cprice, oprice, company }) {
+  const navigate = useNavigate();
 
-
+  const handleClick = () => {
+      navigate(`/details/${id}`)
+  }
 
   return (
     <div className="deal-card">
@@ -21,8 +21,8 @@ function DealCard({ image, title, url, cprice, oprice }) {
         </div>
         <div className='flex justify-center'>
           <div>
-            <a href={url} className="btn">View Deal</a><br/>
-            <img className="w-[150px] h-[50px]" src={AmazonLogo} />
+            <a onClick={() => handleClick()} className="btn hover:cursor-pointer">View Deal</a><br/>
+            <img className="w-[150px] h-[50px]" alt={id} src={`/assets/${company}.svg`} />
           </div>
         </div>
       </div>

@@ -13,11 +13,13 @@ import Deals from './pages/Deals'
 import MobileDeals from './pages/MobileDeals'
 import About from './pages/About'
 import Details from './pages/Details';
+import Categories from './pages/Categories';
 
 import Amazon_DealsData from './dealsdata/Amazon.json'
 import BestBuy_DealsData from './dealsdata/BestBuy.json'
 import Woot_DealsData from './dealsdata/Woot.json'
 import Walmart_DealsData from './dealsdata/Walmart.json'
+
 
 const alldata = {
   "All Company": [...Amazon_DealsData, ...BestBuy_DealsData, ...Woot_DealsData, ...Walmart_DealsData]
@@ -41,6 +43,7 @@ function App() {
         <Route path="/home" element={isMobile ===true ? <MobileDeals data={hotdata}/>: <Deals data={hotdata} /> } />
         <Route path="/deals" element={isMobile ===true ? <MobileDeals data={alldata["All Company"]}/>: <Deals data={alldata["All Company"]} /> } />
         <Route path="/details/:id" element={<Details datas={alldata["All Company"]}/>}/>
+        <Route path='/categories' element={<Categories />}/>
         <Route path='/about' element={<About />}/>
       </Routes>
     </>

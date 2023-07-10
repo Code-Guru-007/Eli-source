@@ -52,6 +52,7 @@ function MobileDeals({data}) {
               url={deal.Url}
               oprice={deal.Price1}
               cprice={deal.Price2}
+              company={deal.Company}
             />
           ))}
         </div>
@@ -59,8 +60,6 @@ function MobileDeals({data}) {
           <Pagination onPageChange={handlePageChange} totalCount={count} currentPage={currentPage} pageSize={pageSize}/>
         </div>
       </section>
-
-
       <Footer />
     </div>
   );
