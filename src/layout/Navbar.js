@@ -22,37 +22,36 @@ function Navbar  ({onSearch, search})  {
       setBurgerState(!burgerState)
     }
 
-    const click = "block py-2 pl-3 pr-4 font-[18px] font-bold uppercase text-white bg-blue-700 rounded md:bg-transparent md:text-red-700 md:p-0 md:dark:text-blue-500";
+    const click = "block py-2 pl-3 pr-4 font-[18px] font-bold uppercase text-white bg-red-600 rounded md:bg-transparent md:text-red-700 md:p-0 md:dark:text-blue-500";
     const normal = "block py-2 pl-3 pr-4 font-[18px] font-bold uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-700 md:p-0 dark:text-white md:dark:hover:text-red-500 dark:hover:bg-red-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
 
     return (
         <header>
           <nav className="bg-white border-gray-200 dark:bg-gray-900 flex justify-between items-center px-[5vw]">
-            <div className='flex items-center justify-between'>
+            <div className='flex items-center'>
               <div id="logo" className='mr-[5vw] w-[100px] py-[5px]'>
                 <img alt='logo' className='w-[100px]' src="/CommunityDealsLogo.JPG"/>
               </div>
-              <div className='hidden md:block'>
+            </div>
+            <div className='hidden md:block'>
                 <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                   <li>
-                    <a href="/home" className={normal} aria-current="page">Home</a>
+                    <a href="/home" onClick={()=>onNavStateChange("/home")} className={navState.toString().includes("home") ? click : normal} aria-current="page">Home</a>
                   </li>
                   <li>
-                    <a href="/deals" className={normal}>Deals</a>
+                    <a href="/deals" onClick={()=>onNavStateChange("/deals")} className={navState.toString().includes("deals") ? click : normal}>Deals</a>
                   </li>
                   <li>
-                    <a href="/categories" className={normal}>Categories</a>
+                    <a href="/categories" onClick={()=>onNavStateChange("/categories")} className={navState.toString().includes("categories") ? click : normal}>Categories</a>
                   </li>
                   <li>
-                    <a href="/about" className={normal}>About</a>
+                    <a href="/about" onClick={()=>onNavStateChange("/about")} className={navState.toString().includes("about") ? click : normal}>About</a>
                   </li>
                   <li>
-                    <a href="/contact" className={normal}>Contact</a>
+                    <a href="/contact" onClick={()=>onNavStateChange("/contact")} className={navState.toString().includes("contact") ? click : normal}>Contact</a>
                   </li>
                 </ul>
               </div>
-              
-            </div>
             <div id="searchbox">
               {search ? (
                 <div className="relative hidden md:block">
@@ -62,7 +61,7 @@ function Navbar  ({onSearch, search})  {
                     </svg>
                     <span className="sr-only">Search icon</span>
                   </div>
-                  <input type="text" data-id="search1" id="search-navbar" className="block w-full p-2 pl-10 text-sm text-gray-900 border-none focus:border-none bg-gray-50 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white " placeholder="Search..." onChange={(e)=>onSearch(e)}/>
+                  <input type="text" data-id="search1" id="search-navbar" className="block w-full p-2 pl-10 text-sm text-gray-900 border-none focus:border-none bg-white dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white " placeholder="Search..." onChange={(e)=>onSearch(e)}/>
                 </div>
               ):(<></>)}
               <div className='md:hidden flex'>
@@ -91,7 +90,7 @@ function Navbar  ({onSearch, search})  {
                 </svg>
                 <span className="sr-only">Search icon</span>
               </div>
-              <input type="text" id="search-navbar" className="rounded-sm block w-full px-[5px] pl-10 text-sm text-gray-900 border-none focus:border-none bg-gray-50 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white " placeholder="Search..." onChange={(e)=>onSearch(e)}/>
+              <input type="text" id="search-navbar" className="rounded-sm block w-full px-[5px] pl-10 text-sm text-gray-900 border-none focus:border-none dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white " placeholder="Search..." onChange={(e)=>onSearch(e)}/>
             </div>
           ):(<></>)}
           <div className={burgerState ? 'block w-full' : "hidden"}>

@@ -18,9 +18,9 @@ function Details({datas}) {
     }, []);
 
     return (
-        <div className="h-[100vh]">
+        <a className="h-[100vh]">
             <Navbar search={false}/>
-            <div className="p-[20px] h-auto">
+            <a href={_data.Url} target="_blank" rel="noreferrer" className="p-[20px] h-auto">
                 <div className='border border-neutral-400 rounded-xl bg-white w-full p-[25px]'>
                     <div className='grid lg:grid-cols-4'>
                         <div className='col-span-3 w-full flex items-center justify-center'>
@@ -43,11 +43,11 @@ function Details({datas}) {
                         <p className="text-[20px] detail-title">{_data.Name}</p>
                     </div>
                 </div>
-            </div>
+            </a>
             <div className="absolute bottom-0 w-full">
                 <Footer />
             </div>
-        </div>
+        </a>
     );
 
 }

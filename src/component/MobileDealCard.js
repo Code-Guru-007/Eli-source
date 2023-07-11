@@ -21,10 +21,10 @@ function MobileDealCard({ id, image, title, url, cprice, oprice, company }) {
                 </div>
                 <div className='col-span-3 grid grid-rows-3 ml-[10px]'>
                     <div className='row-span-2 flex items-center'>
-                        <div className='deal-title'>{title}</div>
+                        <div className='deal-title font-bold'>{title}</div>
                     </div>                
                     <div className='flex justify-between'>
-                        <img className="w-[150px] h-[50px]" src={`/assets/${company}.svg`} />
+                        <img className="w-[150px] h-[50px]" alt={company} src={`/assets/${company}.svg`} />
                         <div className=" text-[14px] sm:text-[20px] flex justify-center mt-[10px]" style={{height:"30px"}}>
                             <p className="text-green-600 font-bold" style={{marginRight:"20px"}}>{cprice}</p>
                             <p className="line-through text-red-600 font-bold">{oprice}</p>
