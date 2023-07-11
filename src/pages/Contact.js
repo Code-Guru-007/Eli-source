@@ -19,7 +19,7 @@ function Contact(){
                         <div className="row-span-2 flex items-center"><img alt="whatsapp logo" src="/assets/whatsapp.svg"/></div>
                         <div className="flex items-center justify-center" >
                             <div>
-                                <a rel="noreferrer" className="hover:cursor-pointer text-white py-[10px] px-[20px] bg-emerald-500 hover:bg-emerald-600 border rounded-full text-center text-[20px]  " href="https://chat.whatsapp.com/DxfjUwOlc0lDZTzJElGehO" target="_blank">Join with whatsapp</a>
+                                <a  className="hover:cursor-pointer text-white py-[10px] px-[20px] bg-emerald-500 hover:bg-emerald-600 border rounded-full text-center text-[20px]  " rel="noreferrer" href="https://chat.whatsapp.com/DxfjUwOlc0lDZTzJElGehO" target="_blank">Join with whatsapp</a>
                             </div>
                         </div>
                     </div>

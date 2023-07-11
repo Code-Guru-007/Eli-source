@@ -16,7 +16,7 @@ function Deals({data}) {
   
   const [count, setCount] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(12);
+  const [pageSize, setPageSize] = useState(15);
   const [searchText, setSearchText] = useState("");
   const [filteredData, setFilteredData] = useState(deals);
 
