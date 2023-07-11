@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.4af6e2f1.css",
-    "main.js": "/static/js/main.25a90415.js",
+    "main.js": "/static/js/main.771ffd95.js",
     "static/js/787.b3d32539.chunk.js": "/static/js/787.b3d32539.chunk.js",
-    "static/media/CommunityDealsLogo.JPG": "/static/media/CommunityDealsLogo.820fc87a61896969e2b0.JPG",
     "index.html": "/index.html",
     "main.4af6e2f1.css.map": "/static/css/main.4af6e2f1.css.map",
-    "main.25a90415.js.map": "/static/js/main.25a90415.js.map",
+    "main.771ffd95.js.map": "/static/js/main.771ffd95.js.map",
     "787.b3d32539.chunk.js.map": "/static/js/787.b3d32539.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4af6e2f1.css",
-    "static/js/main.25a90415.js"
+    "static/js/main.771ffd95.js"
   ]
 }
