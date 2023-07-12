@@ -29,9 +29,9 @@ function Navbar  ({onSearch, search})  {
         <header>
           <nav className="bg-white border-gray-200 dark:bg-gray-900 flex justify-between items-center px-[5vw]">
             <div className='flex items-center'>
-              <div id="logo" className='mr-[5vw] w-[100px] py-[5px]'>
+              <a href="/" id="logo" className='mr-[5vw] w-[100px] py-[5px]'>
                 <img alt='logo' className='w-[100px]' src="/CommunityDealsLogo.JPG"/>
-              </div>
+              </a>
             </div>
             <div className='hidden md:block'>
                 <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">

@@ -7,7 +7,8 @@
       "Price2": "$175.99",
       "id" : "3532143",
       "Company" : "Amazon",
-      "Subtype" : "laptops and computers"
+      "Subtype" : "laptops and computers",
+      "Off" : "22"
     },
     {
       "Name": "LG 65-Inch Class UR9000 Series Alexa Built-in 4K Smart TV (3840 x 2160),Bluetooth, Wi-Fi, USB, Ethernet, HDMI 60Hz Refresh Rate, AI-Powered 4K",
@@ -17,7 +18,8 @@
       "Price2": "$74.99",
       "id" : "aegda3",
       "Company" : "Amazon",
-      "Subtype" : "laptops and computers"
+      "Subtype" : "laptops and computers",
+      "Off" : "22" 
     },
     {
         "Name": "Amazon Fire TV 32\" 2-Series 720p HD smart TV + 4-year protection plan",

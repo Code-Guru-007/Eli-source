@@ -24,6 +24,7 @@
 .deal-image {
   width: 90%;
   height : 100px;
+  object-fit : contain;
 
 }
 
