@@ -33,10 +33,19 @@ function MobileDeals({data}) {
     const filtered_Data = searchText ? deals.filter((deal) => deal["Name"].toLowerCase().includes(searchText.toLowerCase())) : deals;
     setFilteredData(filtered_Data);
     setCount(filtered_Data.length);
-  }, [searchText]);
+  }, [searchText, deals]);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
+    const scrollToTop = () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+      if (scrollTop > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, scrollTop - scrollTop / 15);
+      }
+    };
+    scrollToTop();
   };
 
   const handleSearchChange = (event) => {
@@ -59,8 +68,8 @@ function MobileDeals({data}) {
               image={deal.Image}
               title={deal.Name}
               url={deal.Url}
-              oprice={deal.Price1}
-              cprice={deal.Price2}
+              oprice={deal.Price2}
+              cprice={deal.Price1}
               company={deal.Company}
             />
           ))}

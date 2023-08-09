@@ -1,5 +1,6 @@
 import React from 'react';
 import { usePagination, DOTS } from '../hooks/usePagination';
+import { isMobile } from 'react-device-detect';
 
 const Pagination = props => {
   const {
@@ -45,7 +46,7 @@ const Pagination = props => {
           <span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"/></svg>
           </span>
-          <div className='pr-2 border-r-[1px] border-slate-400'>Previous</div>
+          <div className='pr-2 border-r-[1px] border-slate-400'>{!isMobile ? "Previous" : ""}</div>
         </button>
         {paginationRange.map(pageNumber => {
           
@@ -73,7 +74,7 @@ const Pagination = props => {
           disabled={currentPage===lastPage ? true : false}
           onClick={onNext}
         >
-          <div className='pl-2 border-l-[1px] border-slate-400 ml-2'>Next</div>
+          <div className='pl-2 border-l-[1px] border-slate-400 ml-2'>{!isMobile ? "Next" : ""}</div>
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
           </span>

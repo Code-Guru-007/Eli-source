@@ -11,10 +11,10 @@ function DealCard({ id, image, title, url, cprice, oprice, company }) {
   }
 
   return (
-    <div className="deal-card">
+    <div className="deal-card flex flex-col justify-between">
       <img className="deal-image" src={image} alt={title} />
+      <h3 className="deal-title font-bold">{title}</h3>
       <div className="deal-content">
-        <h3 className="deal-title font-bold">{title}</h3>
         <div className="flex justify-center mt-[10px]" style={{height:"30px"}}>
           <p className="text-green-600 font-bold" style={{marginRight:"20px"}}>{cprice}</p>
           <p className="line-through text-red-600 font-bold">{oprice}</p>

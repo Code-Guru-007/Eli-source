@@ -5,7 +5,7 @@ import Category from "../component/Category";
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 
-import CategoriesData from '../dealsdata/CategoriesData.json'
+import CategoriesData from './CategoriesData.json'
 
 function Categories() {
 
